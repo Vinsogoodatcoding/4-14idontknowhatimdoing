@@ -1,1 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+I will start in the middle of the screen and randomly spaz out on the x and y axis.
+However, if I ever leave the edge of the screen, I will be put back in the middle.
+        <script>     
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  
+  rect(30, 20, 55, 55);
+}
+function draw() {
+    //console.log(mouseX)
+    //rect(mouseX, mouseY, 55, 55);
+    rect(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
+}
+    </script>
+</body>
+</html>
