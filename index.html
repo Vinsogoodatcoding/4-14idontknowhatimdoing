@@ -10,14 +10,19 @@
 
         <script>     
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(100, 100);
+
+  // Paint the background once.
   background(200);
-  circle(50, 50, 25);
+
+  describe(
+    'A white circle on a gray background. The circle follows the mouse as the user moves, leaving a trail.'
+  );
 }
+
 function draw() {
-    //console.log(mouseX)
-    //rect(mouseX, mouseY, 55, 55);
-    circle(mouseX, mouseY, mouseX-pmouseX, mouseY-pmouseY);
+  // Draw circles repeatedly.
+  circle(mouseX, mouseY, 40);
 }
     </script>
     I will start in the middle of the screen and randomly spaz out on the x and y axis.
